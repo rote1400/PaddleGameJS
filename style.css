@@ -1,0 +1,55 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 400;
+    --saturation: 50%;
+    --foreground-color: hsl(var(--hue), var(--saturation), 75%);
+    --background-color: hsl(var(--hue), var(--saturation), 30%);
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+.paddle {
+    --position: 50;
+
+    position: absolute;
+    background-color: var(--foreground-color);
+    height: 10vh;
+    width: 1vh;
+    top: calc(var(--position) * 1vh);
+    transform: translateY(-50%);
+}
+
+.paddle.left {
+    left: 1vw;
+}
+
+.paddle.right {
+    right: 1vw;
+}
+
+.ball {
+    --x: 50;
+    --y: 50;
+    
+    position: absolute;
+    background-color: var(--foreground-color);
+    height: 2.5vh;
+    width: 2.5vh;
+    left: calc(var(--x) * 1vw);
+    top: calc(var(--y) * 1vh);
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.score {
+    font-size: 8vh;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+}
