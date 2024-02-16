@@ -52,4 +52,18 @@ body {
     font-weight: bold;
     justify-content: center;
     display: flex;
+    color: var(--foreground-color);
+}
+
+.score > * {
+    padding: 0 2vh;
+    margin: 1vh 0;
+    flex-basis: 0;
+    flex-grow: 1;
+    opacity: 0.5;
+}
+
+.score > :first-child {
+    text-align: right;
+    border-right: 0.5vh double var(--foreground-color);
 }
