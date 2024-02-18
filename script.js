@@ -12,7 +12,7 @@ let lastTime;
 function update(time) {
     if (lastTime != null) {
         const delta = time - lastTime;
-        ball.update(delta, [playerPaddle.rect(), computerPaddle.rect()]);
+        ball.update(delta, [playerPaddle.rectangle(), computerPaddle.rectangle()]);
         computerPaddle.update(delta, ball.y);
         const hue = parseFloat(
             getComputedStyle(document.documentElement).getPropertyValue("--hue")
@@ -29,8 +29,8 @@ function update(time) {
 }
 
 function handleLose() {
-    const rect = ball.rect();
-    if (rect.right >= window.innerWidth) {
+    const rectangle = ball.rectangle();
+    if (rectangle.right >= window.innerWidth) {
         playerScoreElement.textContent = parseInt(playerScoreElement.textContent) + 1;
     } else {
         computerScoreElement.textContent = parseInt(computerScoreElement.textContent) + 1;
@@ -40,8 +40,8 @@ function handleLose() {
 }
 
 function isLose() {
-    const rect = ball.rect();
-    return rect.right >= window.innerWidth || rect.left <= 0;
+    const rectangle = ball.rectangle();
+    return rectangle.right >= window.innerWidth || rectangle.left <= 0;
 }
 
 document.addEventListener("mousemove", e => {

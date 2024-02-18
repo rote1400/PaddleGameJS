@@ -23,7 +23,7 @@ export default class Ball {
         this.ballElem.style.setProperty("--y", value);
     }
 
-    rect() {
+    rectangle() {
         return this.ballElem.getBoundingClientRect()
     }
 
@@ -41,17 +41,17 @@ export default class Ball {
         this.velocity = INITIAL_VELOCITY;
     }
 
-    update(delta, paddleRects) {
+    update(delta, paddleRectangles) {
         this.x += this.direction.x * this.velocity * delta;
         this.y += this.direction.y * this.velocity * delta;
         this.velocity += VELOCITY_INCREASE * delta;
-        const rect = this.rect();
+        const rectangle = this.rectangle();
 
-        if (rect.bottom >= window.innerHeight || rect.top <= 0) {
+        if (rectangle.bottom >= window.innerHeight || rectangle.top <= 0) {
             this.direction.y *= -1;
         }
 
-        if (paddleRects.some(r => isCollision(r, rect))) {
+        if (paddleRectangles.some(r => isCollision(r, rectangle))) {
             this.direction.x *= -1;
         }
     }
@@ -61,11 +61,11 @@ function randomNumberBetween(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-function isCollision(rect1, rect2) {
+function isCollision(rectangle1, rectangle2) {
     return (
-     rect1.left <= rect2.right && 
-     rect1.right >= rect2.left &&
-     rect1.top <= rect2.bottom &&
-     rect1.bottom >= rect2.top
+     rectangle1.left <= rectangle2.right && 
+     rectangle1.right >= rectangle2.left &&
+     rectangle1.top <= rectangle2.bottom &&
+     rectangle1.bottom >= rectangle2.top
      );
 }

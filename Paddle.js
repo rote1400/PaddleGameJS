@@ -16,7 +16,7 @@ export default class Paddle {
         this.paddleElem.style.setProperty("--position", value);
     }
 
-    rect() {
+    rectangle() {
         return this.paddleElem.getBoundingClientRect();
     }
 
