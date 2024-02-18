@@ -14,6 +14,11 @@ function update(time) {
         const delta = time - lastTime;
         ball.update(delta, [playerPaddle.rect(), computerPaddle.rect()]);
         computerPaddle.update(delta, ball.y);
+        const hue = parseFloat(
+            getComputedStyle(document.documentElement).getPropertyValue("--hue")
+        );
+
+        document.documentElement.style.setProperty("--hue", hue + delta * 0.015);
 
         if (isLose()) {
             handleLose();
