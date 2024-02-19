@@ -18,7 +18,7 @@ function update(time) {
             getComputedStyle(document.documentElement).getPropertyValue("--hue")
         );
 
-        document.documentElement.style.setProperty("--hue", hue + delta * 0.015);
+        document.documentElement.style.setProperty("--hue", hue + delta * 0.001);
 
         if (isLose()) {
             handleLose();
