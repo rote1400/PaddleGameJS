@@ -68,3 +68,5 @@ body {
     text-align: right;
     border-right: 0.5vh double var(--foreground-color);
 }
+
+html {cursor:none}
