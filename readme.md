@@ -2,6 +2,9 @@
 
 Welcome to the Paddle Game! This game is built using Vanilla JavaScript, CSS3, and HTML5. It offers a fun and interactive way to test your reflexes and hand-eye coordination. 
 
+![Paddle Game Screenshot](https://github.com/rote1400/PaddleGameJS/blob/main/images/GamePlay.png)
+
+
 ## Features
 
 - **Smooth Gameplay:** Experience seamless and responsive gameplay powered by Vanilla JavaScript.
@@ -25,7 +28,6 @@ Welcome to the Paddle Game! This game is built using Vanilla JavaScript, CSS3, a
 
 ## Play the Game
 
-You can check out the project and play the game on [GitHub](github.com/rote1400/PaddleGameJS/),
-[Live Demo](https://rote1400.github.io/PaddleGameJS/)
+You can check out the project [GitHub](github.com/rote1400/PaddleGameJS/) and play the game deployed on GitHub Pages [Live Demo](https://rote1400.github.io/PaddleGameJS/).
 
 Enjoy the game and challenge yourself to achieve the highest score!
