@@ -7,8 +7,8 @@ Welcome to the Paddle Game! This game is built using Vanilla JavaScript, CSS3, a
 
 ## Features
 
-- **Smooth Gameplay:** Experience seamless and responsive gameplay powered by Vanilla JavaScript.
-- **Modern Design:** Enjoy a clean and modern interface designed with CSS3.
+- **Smooth Gameplay:** Experience seamless and responsive gameplay powered by Vanilla JavaScript. The ball is becoming faster over game.
+- **Modern Design:** Enjoy a clean and modern interface designed with CSS3. Background color is changing over the game.
 - **Interactive Canvas:** The game leverages HTML5 Canvas to render dynamic and visually appealing graphics.
 - **Responsive Controls:** Use keyboard inputs to control the paddle and keep the ball in play.
 - **Score Tracking:** Keep track of your high score as you improve your skills.
